@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
+import axios from 'axios';
 import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,6 +9,8 @@ import './index.css';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
+
+axios.defaults.baseURL = "http://18.177.140.79:8080/";
 
 root.render(
   <React.StrictMode>

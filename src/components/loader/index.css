@@ -1,0 +1,26 @@
+.loader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .loading {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #7c4949;
+    border-radius: 50%;
+    border-top: 0;
+    border-right: 0;
+    animation: identifier 2s infinite linear;
+  }
+  
+  @keyframes identifier {
+    from {
+      transform: rotate(0DEG);
+    }
+    to {
+      transform: rotate(360DEG);
+    }
+  }
