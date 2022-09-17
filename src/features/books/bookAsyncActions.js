@@ -8,3 +8,11 @@ export const fetchAllBooks = createAsyncThunk(
       return response.data;
     }
 );
+
+export const fetchPanels = createAsyncThunk(
+  'counter/fetchPanels',
+  async (chapterId) => {
+    const response = await axios.get(`chapters/${chapterId}/`);
+    return response.data;
+  }
+);

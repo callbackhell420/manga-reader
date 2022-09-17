@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAllBooks } from './bookAsyncActions';
+import { fetchAllBooks, fetchPanels } from './bookAsyncActions';
 
 const initialState = {
   books: [],
-  loading: true
+  panels: [],
+  loading: true,
+  loadingPanel: true
 };
 
 
@@ -30,7 +32,15 @@ export const bookSlice = createSlice({
       .addCase(fetchAllBooks.fulfilled, (state, action) => {
         state.loading = false;
         state.books = action.payload;
-      });
+      })
+      .addCase(fetchPanels.pending, (state) => {
+        state.loadingPanel = true;
+      })
+      .addCase(fetchPanels.fulfilled, (state, action) => {
+        state.loadingPanel = false;
+        state.panels = action.payload;
+      })
+      ;
   },
 });
 

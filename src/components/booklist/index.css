@@ -1,0 +1,10 @@
+.component.book-list .flex-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.book-list .active button {
+    background-color: green;
+    color: white;
+}

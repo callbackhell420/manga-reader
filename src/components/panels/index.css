@@ -1,0 +1,13 @@
+.panel {
+    display: none;
+    height: calc(100vh - 150px);
+}
+
+.panel.visible {
+    display: block;
+}
+
+.panel img {
+    height: 100%;
+    cursor: pointer;
+}
