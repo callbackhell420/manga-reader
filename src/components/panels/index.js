@@ -28,10 +28,10 @@ const Panels = ( props ) => {
         const lastElementId = panels[panels.length - 1].id;
 
         if((element.width / 2) >= xPos) {
-            if(activePanel >= firstElementId) {
-                //updateChapter(-1);
-            } else {
+            if(activePanel > firstElementId) {
                 setActivePanel(activePanel - 1);
+            } else {
+                //updateChapter(-1);
             }
         } else {
             if(activePanel < lastElementId) {
